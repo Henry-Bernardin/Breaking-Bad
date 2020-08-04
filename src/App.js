@@ -9,7 +9,9 @@ const [items, setItems] = useState([])
 const [isLoading, setIsLoading] = useState(true)
 
 useEffect(() => {
-
+const fetchedItems = async () => {
+  const result = await axios(`https://www.breakingbadapi.com/api/characters`)
+}
 })
   return (
   <div className="container">
