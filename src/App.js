@@ -5,14 +5,17 @@ import './App.css';
 
 
 const App = () => {
-const [items, setItems] = useState([])
-const [isLoading, setIsLoading] = useState(true)
+const [items, setItems] = React.useState([])
+const [isLoading, setIsLoading] = React.useState(true)
 
 useEffect(() => {
 const fetchedItems = async () => {
-  const result = await axios(`https://www.breakingbadapi.com/api/characters`)
+const result = await axios(`https://www.breakingbadapi.com/api/characters`)
+
+  console.log(result.data)
 }
-})
+}, [])
+
   return (
   <div className="container">
     <Header />
