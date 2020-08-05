@@ -8,12 +8,17 @@ const App = () => {
 const [items, setItems] = React.useState([])
 const [isLoading, setIsLoading] = React.useState(true)
 
-useEffect(() => {
+useEffect(() => {  
 const fetchedItems = async () => {
 const result = await axios(`https://www.breakingbadapi.com/api/characters`)
 
   console.log(result.data)
+  setItems(result.data)
+  setIsLoading(false)
 }
+
+fetchedItems()
+
 }, [])
 
   return (
@@ -24,3 +29,4 @@ const result = await axios(`https://www.breakingbadapi.com/api/characters`)
 }
 
 export default App;
+
