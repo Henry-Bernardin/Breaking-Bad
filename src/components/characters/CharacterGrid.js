@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CharacterGrid = () => {
+const CharacterGrid = ({items, isLoading}) => {
     return (
         <div>
             
