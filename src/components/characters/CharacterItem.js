@@ -5,9 +5,9 @@ import React from 'react'
         <div className='card'>
         <div className='card-inner'>
           <div className='card-front'>
-            <img src={item.img} alt='' />
+            <img src={item.img} alt='' /> // On the front of the card we have the image 
           </div>
-          <div className='card-back'>
+          <div className='card-back'> // On the card back with item.name and a ul of their info
             <h1>{item.name}</h1>
             <ul>
               <li>
