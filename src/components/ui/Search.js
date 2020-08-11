@@ -2,10 +2,11 @@ import React, { useState } from 'react'
 
 const Search = () => {
     return (
-        <div>
+        <section>
             
-        </div>
+        </section>
     )
 }
 
 export default Search
+
