@@ -9,10 +9,11 @@ import './App.css';
 const App = () => {
 const [items, setItems] = React.useState([])
 const [isLoading, setIsLoading] = React.useState(true)
+const [query, setQuery] = React.useState('')
 
 useEffect(() => {  
 const fetchedItems = async () => {
-const result = await axios(`https://www.breakingbadapi.com/api/characters`)
+const result = await axios(`https://www.breakingbadapi.com/api/characters?name${query}`)
 
   console.log(result.data)
   
