@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import axios from 'axios'
 import Header from './components/Header'
 import CharacterGrid from './components/characters/CharacterGrid'
+import Search from './components/ui/Search'
 import './App.css';
 
 
