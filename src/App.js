@@ -23,13 +23,13 @@ const result = await axios(`https://www.breakingbadapi.com/api/characters?name${
 
 fetchedItems()
 
-}, [])
+}, [query])
 
   return (
   <div className="container">
     <Header />
-    <Search />
-    <CharacterGrid isLoading={isLoading} items={items}/>
+    <Search getQuery={} />
+    <CharacterGrid isLoading={isLoading} items={items} />
     </div>
   )
 }
