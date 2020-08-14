@@ -13,7 +13,9 @@ const [query, setQuery] = React.useState('')
 
 useEffect(() => {  
 const fetchedItems = async () => {
-const result = await axios(`https://www.breakingbadapi.com/api/characters?name${query}`)
+const result = await axios(
+  `https://www.breakingbadapi.com/api/characters?name=${query}`
+  )
 
   // console.log(result.data)
   
@@ -26,7 +28,7 @@ fetchedItems()
 }, [query])
 
   return (
-  <div className="container">
+  <div className='container'>
     <Header />
     <Search getQuery={(q) => setQuery(q)} />
     <CharacterGrid isLoading={isLoading} items={items} />
