@@ -28,7 +28,7 @@ fetchedItems()
   return (
   <div className="container">
     <Header />
-    <Search getQuery={} />
+    <Search getQuery={(q) => setQuery(q)} />
     <CharacterGrid isLoading={isLoading} items={items} />
     </div>
   )
